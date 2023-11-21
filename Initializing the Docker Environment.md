@@ -1,20 +1,20 @@
-Certainly! Here's the provided lab activity converted into a Markdown format with added context for better readability:
-
-```markdown
-# Initializing the Docker Environment
-
-## Introduction
-
-Docker is the leading containerization platform, widely used for managing and deploying applications in containers. This lab will guide you through the process of setting up your environment to work with Docker.
-
-## Solution
-
 ### Step 1: Log in to the Server
 
 Log in to the server using the provided credentials:
 
 ```bash
 ssh cloud_user@<PUBLIC_IP_ADDRESS>
+
+or 
+
+vagrant up and vagrant ssh (centos vagrant file)
+
+Switch to this new user:
+
+(name : "srihari") (password : "ComplexPwd@321")
+
+su - srihari
+
 ```
 
 ### Step 2: Installing Docker
@@ -54,7 +54,7 @@ sudo systemctl enable --now docker
 Add the lab user to the Docker group to run Docker commands without using `sudo`. Note that you need to log out and log back in for the changes to take effect:
 
 ```bash
-sudo usermod -aG docker cloud_user
+sudo usermod -aG docker srihari
 ```
 
 ### Step 7: Running a Test Image
