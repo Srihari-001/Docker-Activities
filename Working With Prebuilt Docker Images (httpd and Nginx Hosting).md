@@ -226,31 +226,49 @@ docker rm nginx
 ```
 docker ps -a
 ```
-| **Differences between Apache HTTP Server (httpd) and Nginx:** | |
-| --- | --- |
-| **Architecture:** | |
-| Apache HTTP Server (httpd) | Uses a process-based architecture where each connection is handled by a separate process. |
-| Nginx | Uses an event-driven, asynchronous architecture that is more resource-efficient for handling a large number of concurrent connections. |
-| **Resource Consumption:** | |
-| Apache HTTP Server (httpd) | Consumes more memory per process, and the process-based model can result in higher memory usage under heavy loads. |
-| Nginx | Typically has lower memory usage due to its efficient event-driven model. |
-| **Concurrency Handling:** | |
-| Apache HTTP Server (httpd) | Handles concurrency through a multi-process model where each process handles one connection at a time. |
-| Nginx | Handles concurrency efficiently through an asynchronous, non-blocking model, allowing it to scale better under heavy loads. |
-| **Modules and Configuration:** | |
-| Apache HTTP Server (httpd) | Known for its extensive module ecosystem, providing a wide range of features. Configuration is done using an Apache-specific syntax. |
-| Nginx | Has a modular architecture but tends to have a more streamlined core. Configuration is generally simpler and follows a straightforward syntax. |
-| **Use Cases:** | |
-| Apache HTTP Server (httpd) | Traditionally used for a wide range of use cases, including dynamic content generation with technologies like PHP. |
-| Nginx | Often preferred for serving static content, acting as a reverse proxy, and handling a large number of concurrent connections efficiently. |
-| **Why do we need them:** | |
-| Web Server | Both Apache HTTP Server and Nginx serve as web servers, handling incoming HTTP requests and delivering web content to clients. |
-| Load Balancing | They can act as load balancers, distributing incoming traffic across multiple servers to ensure optimal resource utilization and reliability. |
-| Reverse Proxy | Serve as reverse proxies, forwarding requests from clients to backend servers, often used to improve security, performance, and simplify server management. |
-| Static Content Delivery | Efficiently serve static content (HTML, CSS, images) to clients, optimizing performance for websites. |
-| Application Support | Support for different programming languages and applications. Apache HTTP Server is known for its broad support for various modules and applications, while Nginx is often chosen for its efficient handling of static content and proxy capabilities. |
-| **Which is better:** | |
-| - | The choice between Apache HTTP Server (httpd) and Nginx depends on the specific use case, performance requirements, and personal or organizational preferences. |
-| - | For serving static content, handling a large number of concurrent connections, and acting as a reverse proxy, Nginx is often considered more efficient and lightweight. |
-| - | Apache HTTP Server, with its extensive module ecosystem, is a solid choice for dynamic content generation and supporting a wide range of applications. |
-| - | In summary, neither is universally "better" – it depends on the specific needs of the project or environment. Many factors, including performance requirements, ease of configuration, and specific feature needs, should be considered when choosing between Apache HTTP Server and Nginx. |
+**Differences between Apache HTTP Server (httpd) and Nginx:**
+Differences between Apache HTTP Server (httpd) and Nginx:
+
+Architecture:
+
+Apache HTTP Server (httpd): Uses a process-based architecture where each connection is handled by a separate process.
+Nginx: Uses an event-driven, asynchronous architecture that is more resource-efficient for handling a large number of concurrent connections.
+Resource Consumption:
+
+Apache HTTP Server (httpd): Consumes more memory per process, and the process-based model can result in higher memory usage under heavy loads.
+Nginx: Typically has lower memory usage due to its efficient event-driven model.
+Concurrency Handling:
+
+Apache HTTP Server (httpd): Handles concurrency through a multi-process model where each process handles one connection at a time.
+Nginx: Handles concurrency efficiently through an asynchronous, non-blocking model, allowing it to scale better under heavy loads.
+Modules and Configuration:
+
+Apache HTTP Server (httpd): Known for its extensive module ecosystem, providing a wide range of features. Configuration is done using an Apache-specific syntax.
+Nginx: Has a modular architecture but tends to have a more streamlined core. Configuration is generally simpler and follows a straightforward syntax.
+Use Cases:
+
+Apache HTTP Server (httpd): Traditionally used for a wide range of use cases, including dynamic content generation with technologies like PHP.
+Nginx: Often preferred for serving static content, acting as a reverse proxy, and handling a large number of concurrent connections efficiently.
+Why do we need them:
+
+Web Server:
+
+Both Apache HTTP Server and Nginx serve as web servers, handling incoming HTTP requests and delivering web content to clients.
+Load Balancing:
+
+They can act as load balancers, distributing incoming traffic across multiple servers to ensure optimal resource utilization and reliability.
+Reverse Proxy:
+
+Serve as reverse proxies, forwarding requests from clients to backend servers, often used to improve security, performance, and simplify server management.
+Static Content Delivery:
+
+Efficiently serve static content (HTML, CSS, images) to clients, optimizing performance for websites.
+Application Support:
+
+Support for different programming languages and applications. Apache HTTP Server is known for its broad support for various modules and applications, while Nginx is often chosen for its efficient handling of static content and proxy capabilities.
+Which is better:
+
+The choice between Apache HTTP Server (httpd) and Nginx depends on the specific use case, performance requirements, and personal or organizational preferences.
+For serving static content, handling a large number of concurrent connections, and acting as a reverse proxy, Nginx is often considered more efficient and lightweight.
+Apache HTTP Server, with its extensive module ecosystem, is a solid choice for dynamic content generation and supporting a wide range of applications.
+In summary, neither is universally "better" – it depends on the specific needs of the project or environment. Many factors, including performance requirements, ease of configuration, and specific feature needs, should be considered when choosing between Apache HTTP Server and Nginx.
