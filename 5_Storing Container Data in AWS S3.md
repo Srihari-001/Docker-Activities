@@ -305,6 +305,6 @@ the S3 bucket will near-instantly have access to the content.
    ```
 
 ## Conclusion
-
+```
 Congratulations — you've completed this hands-on lab!
 ```
